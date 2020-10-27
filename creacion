@@ -1,0 +1,13 @@
+create database colegio;
+create table colegio.estudiantes(identificaion INT primary key, nombre varchar(50) , apellido varchar(60), edad tinyint,curso tinyint);
+alter table colegio.estudiantes add direccion varchar(50);
+alter table colegio.estudiantes change identificaion identificacion INT;
+alter table colegio.estudiantes drop column nombre;
+drop table colegio.estudiantes;
+USE colegio;
+alter table estudiantes change grado curso  TINYINT;
+create table docentes(identificacion INT primary key, nombre varchar(50) , apellido varchar(60), edad tinyint);
+create table asignaturas(codigo INT primary key, nombre varchar(50) , docente varchar(60), intensidad tinyint);
+select * from estudiantes;
+select * from prueba;
+create table prueba(codigo INT auto_increment primary key, nombre varchar(50));
